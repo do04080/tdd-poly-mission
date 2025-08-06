@@ -13,6 +13,7 @@ public class Calc {
                 String right = part.substring(i + 1);
                 return c=='+'?run(left) + run(right): run(left) - run(right);
             }
+
         }
         for(int i = part.length()-1; i >=0; i--) {
             char c = part.charAt(i);
