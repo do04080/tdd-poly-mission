@@ -7,7 +7,8 @@ public class Calc {
 
         for (int i = part.length()-1; i >=0; i--) {
             char c = part.charAt(i);
-            if ((c == '+' || c == '-') && i > 0) {
+
+            if ((c == '+' || c == '-') && i>0&& !(part.charAt(i-1)+"").matches("[+\\-*]")) {
                 String left = part.substring(0, i);
                 String right = part.substring(i + 1);
                 return c=='+'?run(left) + run(right): run(left) - run(right);
